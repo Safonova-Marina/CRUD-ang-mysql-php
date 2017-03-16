@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="exampleApp">
+<head>
+    <meta charset="utf-8">
+    <title>Users Editor</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+    <link href="./Libraries/bootstrap-theme.css" rel="stylesheet" />
+    <link href="./Libraries/bootstrap.css" rel="stylesheet" />
+
+    <script src="app.js"></script>
+</head>
+
+<body ng-controller="defaultCtrl">
+    <div class="panel panel-primary">
+        <h2 class="panel-heading">REST CRUD with AngularJs, MySQL and PHP</h2>
+        <h3 class="panel-heading">Users (total: {{items.length}})</h3>
+
+        <div ng-include="'views/table.html'" ng-show="currentView == 'table'"></div>
+        <div ng-include="'views/edit.html'" ng-show="currentView == 'edit'"></div>
+        <!-- <ng-include src="'views/table.html'" ng-show="currentView == 'table'"></ng-include>
+        <ng-include src="'views/edit.html'" ng-show="currentView == 'edit'"></ng-include> -->
+    </div>
+</body>
+</html>
