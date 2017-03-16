@@ -1,0 +1,35 @@
+<!--Представление для отображения всех данных-->
+<div class="panel-body">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in items">
+                <td>{{$index+1}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.passw}}</td>
+
+                <!-- Кнопки "удалить" и "редактировать" напротив каждой записи в таблице-->
+                <td class="text-center">
+                    <button class="btn btn-xs btn-primary" ng-click="delete(item)">
+                        Delete
+                    </button>
+                    <button class="btn btn-xs btn-primary" ng-click="editOrCreate(item)">
+                        Edit
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <button class="btn btn-primary" ng-click="refresh()">Refresh</button>
+        <button class="btn btn-primary" ng-click="editOrCreate()">New</button>
+    </div>
+</div>
